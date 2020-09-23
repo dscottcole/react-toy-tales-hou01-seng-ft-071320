@@ -5,7 +5,7 @@ class ToyForm extends Component {
   render() {
     return (
       <div className="container">
-        <form className="add-toy-form">
+        <form onChange={e => this.props.handleForm(e)} onSubmit={(e) => this.props.submitToy(e)} className="add-toy-form">
           <h3>Create a toy!</h3>
           <input type="text" name="name" placeholder="Enter a toy's name..." className="input-text"/>
           <br/>
